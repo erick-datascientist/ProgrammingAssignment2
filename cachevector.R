@@ -3,19 +3,23 @@
 ## By: Erick Rojas
 ##
 ## The goal of this file is to understand the principles
-## involving caching so that I can work on the matrix
+## involved in vector caching so that I can work on the matrix
 ## assignment
 
 ## makeVector:
 ## Function copied/pasted from week3 example
 makeVector <- function(x = numeric()) {
     m <- NULL
+    # set function
     set <- function(y) {
         x <<- y
         m <<- NULL
     }
+    # get function
     get <- function() x
+    # setmean function
     setmean <- function(mean) m <<- mean
+    # getmean function
     getmean <- function() m
     list(set = set, get = get,
          setmean = setmean,

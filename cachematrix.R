@@ -64,6 +64,7 @@ cacheSolve <- function(x, ...) {
         message("Returning cached inverse matrix")
         return(inv)
     }
+    # this is only executed if inv IS null
     data <- x$get()
     inv <- solve(data, ...)
     x$setinverse(inv)
